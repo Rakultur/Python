@@ -17,26 +17,16 @@ root.config(bg="#d2d4ea")
 # Funciones
 def cifrar():
     try:
-        tbox_2.delete(1.0, END)
-        lt.clear()
-        lt.append(tbox.get("0.1", END))
-        lt.append(codificar.cifrar(lt[0]))
-        tbox_2.insert(1.0, lt[1])
-        del lt[:]
+        v1 = 2
+        v2 = 5
+        r = v1+v2
+        tbox_2["text"] = r
     except:
         MessageBox.showinfo("Error", "Operación no valida")
 
 
 def decifrar():
-    try:
-        tbox_2.delete(1.0, END)
-        lt.clear()
-        lt.append(tbox.get("0.1", END))
-        lt.append(codificar.decifrar(lt[0]))
-        tbox_2.insert(1.0, lt[1])
-        del lt[:]
-    except:
-        MessageBox.showinfo("Error", "Operación no valida")
+    return 0
 
 
 def copiar():
@@ -44,7 +34,7 @@ def copiar():
 
 
 def borrar():
-    tbox_2.delete(1.0, END)
+    tbox_2.config(text="")
 
 
 # Titulo de bievenida
@@ -60,8 +50,10 @@ titulo.config(
 tbox = Text(root)
 tbox.config(bg="#f0f2f0", height=13)
 
-tbox_2 = Text(root)
-tbox_2.config(bg="#f0f2f0", height=13)
+# Label
+tbox_2 = Label(root)
+tbox_2.config(bg="#f0f2f0", width=80, height=13)
+
 
 # Botones
 btn_1 = Button(root)

@@ -6,6 +6,7 @@ lista_2 = list()
 lista_3 = list()
 
 
+# Cifrar
 class codificar:
     def cifrar(entrada):
         lista_1 = list(entrada)
@@ -514,8 +515,11 @@ class codificar:
             elif lista_1[f2] == "§":
                 lista_2.append(crt252)
         resultado = "".join(lista_2)
+        lista_1.clear()
+        lista_2.clear()
         return resultado
 
+    # Decifrar
     def decifrar(palabra):
         lista_2 = list(palabra)
         tamañano_d = len(lista_2)
@@ -1025,4 +1029,6 @@ class codificar:
             elif lista_2[f3] == " ":
                 lista_3.append(crtd252)
         resultado = "".join(lista_3)
+        lista_2.clear()
+        lista_3.clear()
         return resultado
